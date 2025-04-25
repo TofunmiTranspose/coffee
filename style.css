@@ -57,30 +57,29 @@ button{
   background-color: var(--main-color);
   padding: 10px 30px;
   border: 0;
+  width: 150px;
 }
 .shop{
   transform: translateY(-180px);
 }
 .our-story{
-  height: 100vh;
-  padding-top: 15%;
-  display: flex;
-  align-items: center;
-  color: white;
   font-size: 2.5rem;
-  justify-content: space-between;
-  flex-wrap: wrap;
   box-sizing: border-box;
-  text-align: center;
 }
-.our-story p{
-  font-size: 1rem;
-  margin: 0;
-  border: 2px solid red;
+.our-story .wrapper{
+  margin-top: 15%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
 }
 .img-container{
+  display: flex;
+  justify-content: center;
   width: 500px;
   height: 400px;
+  margin: 0;
 }
 .img-container .img{
   background: url(/Images/pexels-chitokan-2183027-removebg-preview.png);
@@ -89,19 +88,26 @@ button{
   height: 400px;
   background-position: center;
 }
+.our-story p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  margin: 0;
+}
 .write-up{
+  color: white;
   width: 500px;
-  margin-top: -150px;
 }
 .perfect{
   box-sizing: border-box;
   margin: 0;
   height: 100vh;
+  padding-top: 5em;
+}
+.perfect-wrapper{
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  padding-top: 5em;
 }
 .perfect .img-container{
   display: flex;
@@ -143,6 +149,7 @@ button{
   align-items: center;
 }
 .product-container{
+  width: 100%;
   margin: 0;
   display: flex;
   flex-wrap: wrap;
@@ -181,8 +188,24 @@ button{
   justify-content: space-around;
   margin: 0;
 }
-.product-img{
+.product-img1{
   background: url(/Images/1.png);
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  bottom: 60px;
+}
+.product-img2{
+  background: url(/Images/3.png);
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  bottom: 60px;
+}
+.product-img3{
+  background: url(/Images/4.png);
   background-size: cover;
   width: 100px;
   height: 100px;
@@ -216,8 +239,8 @@ hr {
   display: block;
   margin-bottom: 20px;
   border-color: #deab5f;
-  width: 300px;
-  margin: 0 auto;
+  width: 500px;
+  margin: 20px auto;
 }
 footer{
   display: flex;
@@ -225,26 +248,85 @@ footer{
   align-items: center;
   justify-content: center;
   color: white;
-  margin-bottom: 200px;
+  margin:30px 0 50px 0;
 }
 footer .container{
   width: 300px;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
-  margin: 20px;
+  margin: 44px 20px 37px 20px;
 }
 footer .container h2{
   font-size: 2rem;
-  margin:10px;
+  margin:20px 10px 15px 10px;
 }
 footer .container p{
   line-height: 30px;
   margin: 10px 0;
 }
-footer .container .foot-span{
+.foot-span{
   color: var(--main-color);
+}
+.copy-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .copyright{
   color: white;
-  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+@media(max-width: 768px) {
+  .landing{
+    gap: 240px;
+  }
+  .landing .heading{
+    font-size: 2.5rem;
+  }
+  .shop{
+    transform: translateY(-230px);
+  }
+  .our-story{
+    width: 95%;
+    margin: 0 auto;
+  }
+.img-container{
+  display: flex;
+  justify-content: center;
+}
+.write-up{
+  text-align: center;
+  font-size: 2.5rem;
+}
+.perfect-wrapper{
+  gap: 2em;
+}
+.perfect .write-up2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.perfect .write-up2 h2{
+  font-size: 2.5rem;
+  text-align: center;
+}
+.perfect .img-container{
+  justify-content: center;
+  margin-top: 20px;
+}
+.products{
+  padding-top: 5em;
+}
+hr{
+  width: 400px;
+}
+footer{
+  margin:0;
+}
+footer .container{
+  margin: 0;
+}
+.lower{
+  display: none;
+}
 }

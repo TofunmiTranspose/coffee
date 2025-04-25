@@ -4,16 +4,351 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Coffee Shop</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+:root {
+  --main-color: #deab5f;
+  --primary-color: #312e2e;
+}
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  width: 100%;
+  background: #100e0f;
+}
+header{
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  font-family: sans-serif;
+  padding: 15px 15px 0px 15px;
+  width: 100%;
+}
+ul{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.links li{
+  list-style: none;
+  margin-left: 45px;
+}
+.links li a{
+  text-decoration: none;
+  color: white;
+  transition: ease 0.1s;
+}
+.links li a:hover{
+  border-bottom: 2px solid var(--main-color);
+}
+.landing{
+  height:100vh;
+  width: 100%;
+  background: url(Images/pexels-nao-triponez-129207.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 190px;
+}
+.heading{
+  margin-top: 120px;
+  color: white;
+  font-size: 4rem;
+  
+}
+button{
+  background-color: var(--main-color);
+  padding: 10px 30px;
+  border: 0;
+  width: 150px;
+}
+.shop{
+  transform: translateY(-180px);
+}
+.our-story{
+  font-size: 2.5rem;
+  box-sizing: border-box;
+}
+.our-story .wrapper{
+  margin-top: 15%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+.img-container{
+  display: flex;
+  justify-content: center;
+  width: 500px;
+  height: 400px;
+  margin: 0;
+}
+.img-container .img{
+  background: url(/Images/pexels-chitokan-2183027-removebg-preview.png);
+  background-size: cover;
+  width: 400px;
+  height: 400px;
+  background-position: center;
+}
+.our-story p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  margin: 0;
+}
+.write-up{
+  color: white;
+  width: 500px;
+}
+.perfect{
+  box-sizing: border-box;
+  margin: 0;
+  height: 100vh;
+  padding-top: 5em;
+}
+.perfect-wrapper{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.perfect .img-container{
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  width: 500px;
+  padding-top: 10px;
+}
+.perfect .imgg{
+  width: 400px;
+  height: 400px;
+  background: url(/Images/2.png);
+  background-size: cover;
+}
+.perfect .write-up2 h2{
+  color: white;
+  font-size: 3rem;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+.write-up2 p{
+  color: white;
+  font-size: 1rem;
+  margin: 15px 0;
+  padding: 0;
+  border: 0;
+}
+.learn{
+  background-color: var(--main-color);
+  padding: 10px 30px;
+  border: 0;
+}
+.products{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.product-container{
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: space-around;
+  align-items: center;
+}
+.product{
+  display: inline-block;
+  border-radius: 5px;
+  border: 2px solid #deab5f;
+  padding: 0px 0;
+  height: 400px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto auto;
+  margin-bottom: 50px;
+}
+.product-title{
+  font-size: 4rem;
+  margin-left: 5rem;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+  align-self: flex-start;
+}
+.product .moncha{
+  font-family: sans-serif;
+  font-size: 1rem;
+  background: transparent;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0;
+}
+.product-img1{
+  background: url(/Images/1.png);
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  bottom: 60px;
+}
+.product-img2{
+  background: url(/Images/3.png);
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  bottom: 60px;
+}
+.product-img3{
+  background: url(/Images/4.png);
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  bottom: 60px;
+}
+.product h2{
+  margin-top: -20px;
+  margin-bottom: 0px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.product ul{
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 10px 0 100px -15px;
+  gap: 20px;
+  align-items: flex-start;
+}
+.product ul li{
+  text-align: left;
+  font-size: 1em;
+  font-family: sans-serif;
+}
+.btnn{
+  display: flex;
+  justify-content: center;
+}
+hr {
+  display: block;
+  margin-bottom: 20px;
+  border-color: #deab5f;
+  width: 500px;
+  margin: 20px auto;
+}
+footer{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin:30px 0 50px 0;
+}
+footer .container{
+  width: 300px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 44px 20px 37px 20px;
+}
+footer .container h2{
+  font-size: 2rem;
+  margin:20px 10px 15px 10px;
+}
+footer .container p{
+  line-height: 30px;
+  margin: 10px 0;
+}
+.foot-span{
+  color: var(--main-color);
+}
+.copy-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.copyright{
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+@media(max-width: 768px) {
+  .landing{
+    gap: 240px;
+  }
+  .landing .heading{
+    font-size: 2.5rem;
+  }
+  .shop{
+    transform: translateY(-230px);
+  }
+  .our-story{
+    width: 95%;
+    margin: 0 auto;
+  }
+.img-container{
+  display: flex;
+  justify-content: center;
+}
+.write-up{
+  text-align: center;
+  font-size: 2.5rem;
+}
+.perfect-wrapper{
+  gap: 2em;
+}
+.perfect .write-up2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.perfect .write-up2 h2{
+  font-size: 2.5rem;
+  text-align: center;
+}
+.perfect .img-container{
+  justify-content: center;
+  margin-top: 20px;
+}
+.products{
+  padding-top: 5em;
+}
+hr{
+  width: 400px;
+}
+footer{
+  margin:0;
+}
+footer .container{
+  margin: 0;
+}
+.lower{
+  display: none;
+}
+}
+  </style>
+  <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 <body>
   <header>
     <h2>Logo</h2> 
     <ul class="links">
       <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Menu</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="#our-story">About</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </header>
   <main class="landing">
@@ -21,31 +356,36 @@
     <h1 class="heading">WITH OUR COFFEE</h1>
     <button class="shop">Shop Now</button>
   </main>
-  <section class="our-story">
-    <div class="img-container">
-      <div class="img"></div>
+  <section id="our-story" class="our-story">
+    <div class="wrapper">
+      <div class="img-container">
+        <div class="img"></div>
+      </div>
+      <div class="write-up">
+        <h1>-OUR STORY</h1>
+        <p>We are active up till date (<span class="date"></span>). consectetur adipisicing elit. Ducimus quasi magni deserunt amet laudantium quae impedit ipsa ex perferendis nihil!</p><br>
+      <button>Learn more</button>
+      </div>
     </div>
-    <div class="write-up">
-      <h1>-OUR STORY</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quasi magni deserunt amet laudantium quae impedit ipsa ex perferendis nihil!</p><br>
-    <button>Learn more</button>
-    </div> 
   </section>
   <section class="perfect">
-    <div class="write-up2">
-      <h2>PERFECT PLACE <br> TO ENJOY YOUR <br> COFFEE</h2>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-      <button class="learn">Learn More</button>
+    <div class="perfect-wrapper">
+      <div class="write-up2">
+        <h2>PERFECT PLACE <br> TO ENJOY YOUR <br> COFFEE</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        <button class="learn">Learn More</button>
+      </div>
+      <div class="img-container">
+        <div class="imgg"></div>
+      </div>
     </div>
-    <div class="img-container">
-      <div class="imgg"></div>
-    </div>
+    
   </section>
   <section class="products">
-    <h1 class="product-title">PRODUCTS</h1>
+    <h1 id="menu" class="product-title">PRODUCTS</h1>
     <div class="product-container">
       <div class="product">
-        <div class="product-img"></div>
+        <div class="product-img1"></div>
         <div class="moncha">
           <h2>Mocha</h2>
           <div>
@@ -61,7 +401,7 @@
         </div>
       </div>
       <div class="product">
-        <div class="product-img"></div>
+        <div class="product-img2"></div>
         <div class="moncha">
           <h2>Mocha</h2>
           <div>
@@ -77,7 +417,7 @@
         </div>
       </div>
       <div class="product">
-        <div class="product-img"></div>
+        <div class="product-img3"></div>
         <div class="moncha">
           <h2>Mocha</h2>
           <div>
@@ -94,8 +434,8 @@
       </div>
     </div> 
   </section>
-  <hr style="width: 300px; background-color: var(yellow);">
-  <footer>
+  <hr>
+  <footer id="contact">
     <div class="container">
       <h2>About <span class="foot-span">Us</span></h2>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, esse!</p></div>
@@ -106,6 +446,12 @@
       <h2>Opening <span class="foot-span">Hours</span></h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, eius?</p></div>
   </footer>
-  <p class="copyright">Copyright @ 2022 HuXn WebDev | Provided by HuXn WebDev</p>
+  <hr class="lower">
+  <div class="copy-container">
+    <p class="copyright">Copyright @ 2022 HuXn WebDev | Provided by <span class="foot-span">Tofunmi_transpose</span> 2022</p>
+  </div>
+  <script>
+    (document.querySelector('.date').innerHTML = new Date().getFullYear());
+  </script>
 </body>
 </html>
